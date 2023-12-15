@@ -1,0 +1,62 @@
+# Arquivos de compilação e output
+bin/
+obj/
+
+# Arquivos temporários
+[Tt]emp/
+[Vv]isual[Uu]ndo/
+*.user
+*.suo
+*.appx
+*.appxbundle
+*.vscode/
+
+# Arquivos de configuração do Windows
+Thumbs.db
+Desktop.ini
+
+# Arquivos de log e cache
+*.log
+*.vspscc
+*.vssscc
+*.dbmdl
+*.jfm
+*.sdf
+*.opensdf
+*.VC.db
+
+# Ferramentas
+_ReSharper*/
+*.resharper*
+[Tt]est[Rr]esult*/
+[Nn]uGet[Rr]estore*/
+*.sln.docstates
+
+# Diretórios específicos do Visual Studio
+.vs2019/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Pasta do MySQL
+# Substitua 'nome_do_seu_projeto' pelo nome real do seu projeto
+nome_do_seu_projeto/mysql/
+
+# Arquivos de configuração do Rider
+.idea/
+
+# Dependências do Node.js
+node_modules/
+
+# Arquivos de compilação e cache do .NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Pasta bin do Cake
+tools/
