@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\armazem.png" />
     <None Remove="Images\back-image.jpg" />
   </ItemGroup>
 
@@ -17,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\armazem.png" />
     <Resource Include="Images\back-image.jpg" />
   </ItemGroup>
 

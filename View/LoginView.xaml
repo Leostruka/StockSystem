@@ -49,9 +49,9 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Log In"
+                    <TextBlock Text="@Leostruka"
                                Foreground="#000"
-                               FontSize="14"
+                               FontSize="12"
                                FontFamily="Montserrat"
                                Grid.Column="0"
                                VerticalAlignment="Center"
@@ -118,14 +118,15 @@
 
                 <StackPanel Grid.Row="1"
                             Orientation="Vertical"
-                            Margin="0,8,0,0"
+                            Margin="0,5,0,0"
                             HorizontalAlignment="Center">
 
-                    <Image Source="\Images\armazem.png"
+                    <Image Source="/Images/armazem.png"
                            Width="100"
-                           Height="100"/>
-                    
-                    <TextBlock Text="StockSystem"
+                           Height="100"
+                           VerticalAlignment="Center"/>
+
+                    <TextBlock Text="Stock System"
                                Foreground="#1E111E"
                                FontSize="24"
                                FontWeight="Medium"
