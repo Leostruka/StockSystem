@@ -13,7 +13,7 @@
         ResizeMode="NoResize"
         MouseDown="Window_MouseDown">
 
-    <Border CornerRadius="27">
+    <Border CornerRadius="28">
         <Border.Background>
             <ImageBrush ImageSource="/Images/back-image.jpg"/>
         </Border.Background>
