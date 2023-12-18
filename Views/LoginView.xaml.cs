@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockSystem.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -16,16 +17,17 @@ using System.Windows.Shapes;
 
 namespace StockSystem.View
 {
-    /// <summary>
-    /// Lógica interna para LoginView.xaml
-    /// </summary>
     public partial class LoginView : Window
     {
+        private LoginViewModel loginViewModel;
+
         public LoginView()
         {
             InitializeComponent();
+            loginViewModel = new LoginViewModel();
+            DataContext = loginViewModel;
         }
-        
+
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -44,7 +46,19 @@ namespace StockSystem.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            if (loginViewModel)
+            {
+                MessageBox.Show("Login bem-sucedido!");
 
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Credenciais inválidas. Tente novamente.");
+            }
         }
 
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
