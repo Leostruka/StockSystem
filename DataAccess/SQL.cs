@@ -40,6 +40,24 @@ namespace CRUD_Forms.Data
             return dt;
         }
 
+        // Método para autenticar usuário no banco de dados
+        public DataTable Authenticate(string user, string password)
+        {
+            Connection con = new Connection();
+            con.AbrirConexao();
+
+            var sql = new MySqlCommand("SELECT * FROM profile WHERE user = @user AND password = @password", con.con);
+            sql.Parameters.AddWithValue("@user", user);
+            sql.Parameters.AddWithValue("@password", password);
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql);
+            DataTable data = new DataTable();
+            adapter.Fill(data);
+
+            con.CloseConnection();
+            return data;
+        }
+
         // Método para atualizar usuário no banco de dados
         public void Update(int id, string name, string cpf, string email)
         {
