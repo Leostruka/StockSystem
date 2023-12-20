@@ -1,19 +1,8 @@
 ﻿using StockSystem.ViewModel;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace StockSystem.View
 {
@@ -46,10 +35,8 @@ namespace StockSystem.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (loginViewModel)
+            if (loginViewModel.Authenticate(txtUser.Text, txtPass.Password))
             {
-                MessageBox.Show("Login bem-sucedido!");
-
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
 
@@ -58,9 +45,11 @@ namespace StockSystem.View
             else
             {
                 MessageBox.Show("Credenciais inválidas. Tente novamente.");
+                txtPass.Password = "";
             }
         }
 
+        // Hyperlinks
         private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
             try
