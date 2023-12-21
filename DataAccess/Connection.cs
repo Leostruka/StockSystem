@@ -7,7 +7,7 @@ namespace StockSystem.DataAccess
 {
     public class Connection
     {
-        readonly string connection = "SERVER=localhost; DATABASE=stocksystem; UID=root; PWD=";
+        readonly string connection = "SERVER=localhost; DATABASE=stockdata; UID=root; PWD=";
         public MySqlConnection con = null;
 
         public void AbrirConexao()
