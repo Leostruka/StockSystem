@@ -45,7 +45,9 @@ namespace StockSystem.View
             else
             {
                 MessageBox.Show("Credenciais inválidas. Tente novamente.");
+                txtUser.Text = "";
                 txtPass.Password = "";
+                txtUser.Focus();
             }
         }
 

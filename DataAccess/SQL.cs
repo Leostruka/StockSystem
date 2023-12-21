@@ -46,7 +46,7 @@ namespace CRUD_Forms.Data
             Connection con = new Connection();
             con.AbrirConexao();
 
-            var sql = new MySqlCommand("SELECT * FROM profile WHERE user = @user AND password = @password", con.con);
+            var sql = new MySqlCommand("SELECT * FROM employee WHERE user = @user AND password = @password", con.con);
             sql.Parameters.AddWithValue("@user", user);
             sql.Parameters.AddWithValue("@password", password);
 
