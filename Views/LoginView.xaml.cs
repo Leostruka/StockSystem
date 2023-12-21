@@ -35,19 +35,25 @@ namespace StockSystem.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (loginViewModel.Authenticate(txtUser.Text, txtPass.Password))
+            if (txtUser.Text == "" || txtPass.Password == "")
             {
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-
-                this.Close();
+                MessageBox.Show("Preencha todos os campos.");
+                txtUser.Focus();
+                return;
             }
-            else
+            if (!loginViewModel.Authenticate(txtUser.Text, txtPass.Password))
             {
                 MessageBox.Show("Credenciais inválidas. Tente novamente.");
                 txtUser.Text = "";
                 txtPass.Password = "";
                 txtUser.Focus();
+            }
+            else
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+
+                this.Close();
             }
         }
 
