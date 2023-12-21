@@ -13,6 +13,7 @@ namespace StockSystem.View
         public LoginView()
         {
             InitializeComponent();
+            txtUser.Focus();
             loginViewModel = new LoginViewModel();
             DataContext = loginViewModel;
         }
