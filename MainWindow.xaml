@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="700" Width="1300"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
@@ -45,27 +45,35 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
 
+                    <Grid.Background>
+                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                            <GradientStop Color="#2E576E" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Grid.Background>
+
                     <TextBlock  Text="StockSystem"
                                 FontSize="20" 
                                 FontFamily="Montserrat"
                                 Grid.Column="0" 
                                 VerticalAlignment="Center" 
                                 Margin="20,0,0,0">
-                    
+
                     </TextBlock>
 
                     <Button x:Name="btnMinimize"
-                        BorderThickness="0"
-                        Cursor="Hand"
-                        Grid.Column="1"
-                        Click="btnMinimize_Click">
+                            Content=""
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Grid.Column="1"
+                            Click="btnMinimize_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#2E576E"/>
+                                <Setter Property="Background" Value="#28343B"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#C5C353"/>
+                                        <Setter Property="Content" Value="_"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -84,6 +92,7 @@
                     </Button>
 
                     <Button x:Name="btnMaximize"
+                            Content=""
                             BorderThickness="0"
                             Cursor="Hand"
                             Grid.Column="2"
@@ -91,10 +100,11 @@
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#2E576E"/>
+                                <Setter Property="Background" Value="#28343B"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#47A860"/>
+                                        <Setter Property="Content" Value="□"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -113,17 +123,19 @@
                     </Button>
 
                     <Button x:Name="btnClose"
-                        BorderThickness="0"
-                        Cursor="Hand"
-                        Grid.Column="3"
-                        Click="btnClose_Click">
+                            Content=""
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Grid.Column="3"
+                            Click="btnClose_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
-                                <Setter Property="Background" Value="#2E576E"/>
+                                <Setter Property="Background" Value="#28343B"/>
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#A8474A"/>
+                                        <Setter Property="Content" Value="x"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -140,6 +152,41 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
+                </Grid>
+
+                <Grid Grid.Row="2">
+
+                    <Grid.ColumnDefinitions>
+                        <!--NavBar-->
+                        <ColumnDefinition Width="200"/>
+                        <!--Content-->
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!--NavBar-->
+                    <Border CornerRadius="0,0,0,10"
+                            Grid.Column="0">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,1">
+                                <GradientStop Color="#2E576E" Offset="1"/>
+                                <GradientStop Color="#7491A1" Offset="0"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+
+                    <!--Content-->
+                    <Border CornerRadius="0,0,10,0"
+                            Grid.Column="1">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0.01,0" EndPoint="0,0">
+                                <GradientStop Color="#2E576E" Offset="1"/>
+                                <GradientStop Color="#7491A1" Offset="0"/>
+                                <GradientStop Color="#28343B" Offset="0.9"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+
+                    </Border>
+
                 </Grid>
 
             </Grid>

@@ -80,13 +80,13 @@ namespace StockSystem.View
 
         private void TryLogin()
         {
+            btnLogin.Background = new System.Windows.Media.SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#5FB2E2"));
             if (txtUser.Text == "" || txtPass.Password == "")
             {
                 MessageBox.Show("Preencha todos os campos.");
                 txtUser.Focus();
-                return;
             }
-            if (!loginViewModel.Authenticate(txtUser.Text, txtPass.Password))
+            else if (!loginViewModel.Authenticate(txtUser.Text, txtPass.Password))
             {
                 MessageBox.Show("Credenciais inválidas. Tente novamente.");
                 txtUser.Text = "";
@@ -100,6 +100,7 @@ namespace StockSystem.View
 
                 this.Close();
             }
+            btnLogin.Background = new System.Windows.Media.SolidColorBrush((System.Windows.Media.Color)System.Windows.Media.ColorConverter.ConvertFromString("#93B1C3"));
         }
 
     }
