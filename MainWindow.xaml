@@ -61,7 +61,9 @@
                     </TextBlock>
 
                     <Button x:Name="btnMinimize"
-                            Content=""
+                            Foreground="#000"
+                            FontSize="12"
+                            FontFamily="Montserrat"
                             BorderThickness="0"
                             Cursor="Hand"
                             Grid.Column="1"
@@ -73,7 +75,7 @@
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#C5C353"/>
-                                        <Setter Property="Content" Value="_"/>
+                                        <Setter Property="Content" Value="🗕"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -92,7 +94,9 @@
                     </Button>
 
                     <Button x:Name="btnMaximize"
-                            Content=""
+                            Foreground="#000"
+                            FontSize="12"
+                            FontFamily="Montserrat"
                             BorderThickness="0"
                             Cursor="Hand"
                             Grid.Column="2"
@@ -104,7 +108,7 @@
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#47A860"/>
-                                        <Setter Property="Content" Value="□"/>
+                                        <Setter Property="Content" Value="🗖"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -123,7 +127,9 @@
                     </Button>
 
                     <Button x:Name="btnClose"
-                            Content=""
+                            Foreground="#000"
+                            FontSize="12"
+                            FontFamily="Montserrat"
                             BorderThickness="0"
                             Cursor="Hand"
                             Grid.Column="3"
@@ -135,7 +141,7 @@
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#A8474A"/>
-                                        <Setter Property="Content" Value="x"/>
+                                        <Setter Property="Content" Value="ø"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>

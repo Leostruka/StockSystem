@@ -69,6 +69,9 @@
 
 
                     <Button x:Name="btnMinimize"
+                            Foreground="#000"
+                            FontSize="12"
+                            FontFamily="Montserrat"
                             BorderThickness="0"
                             Cursor="Hand"
                             Grid.Column="1"
@@ -80,6 +83,7 @@
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#C5C353"/>
+                                        <Setter Property="Content" Value="🗕"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
@@ -98,6 +102,9 @@
                     </Button>
 
                     <Button x:Name="btnClose"
+                            Foreground="#000"
+                            FontSize="12"
+                            FontFamily="Montserrat"
                             BorderThickness="0"
                             Cursor="Hand"
                             Grid.Column="2"
@@ -109,6 +116,7 @@
                                 <Style.Triggers>
                                     <Trigger Property="IsMouseOver" Value="True">
                                         <Setter Property="Background" Value="#A8474A"/>
+                                        <Setter Property="Content" Value="ø"/>
                                     </Trigger>
                                 </Style.Triggers>
                             </Style>
