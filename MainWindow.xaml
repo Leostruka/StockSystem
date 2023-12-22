@@ -11,11 +11,11 @@
         Background="Transparent"
         WindowStartupLocation="CenterScreen">
 
-    <Border CornerRadius="28">
+    <Border CornerRadius="18">
 
-        <Border CornerRadius="25"
-            BorderThickness="3"
-            Opacity="0.99">
+        <Border CornerRadius="15"
+            BorderThickness="3">
+            
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
                     <GradientStop Color="#2E576E" Offset="0"/>

@@ -16,6 +16,9 @@ namespace StockSystem.View
             txtUser.Focus();
             loginViewModel = new LoginViewModel();
             DataContext = loginViewModel;
+
+            txtUser.KeyDown += TxtUser_KeyDown;
+            txtPass.KeyDown += TxtPass_KeyDown;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -34,7 +37,48 @@ namespace StockSystem.View
             Application.Current.Shutdown();
         }
 
+        private void TxtUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Se a tecla pressionada for Enter, chama o método de login
+            if (e.Key == Key.Enter)
+            {
+                TryLogin();
+            }
+        }
+
+        private void TxtPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Se a tecla pressionada for Enter, chama o método de login
+            if (e.Key == Key.Enter)
+            {
+                TryLogin();
+            }
+        }
+
         private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            TryLogin();
+        }
+
+        // Hyperlinks
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = e.Uri.AbsoluteUri,
+                    UseShellExecute = true
+                });
+                e.Handled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao abrir o link: {ex.Message}", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void TryLogin()
         {
             if (txtUser.Text == "" || txtPass.Password == "")
             {
@@ -55,24 +99,6 @@ namespace StockSystem.View
                 mainWindow.Show();
 
                 this.Close();
-            }
-        }
-
-        // Hyperlinks
-        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
-        {
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = e.Uri.AbsoluteUri,
-                    UseShellExecute = true
-                });
-                e.Handled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao abrir o link: {ex.Message}", "Erro", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
