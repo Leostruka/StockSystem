@@ -12,11 +12,13 @@
     <None Remove="Images\armazem.png" />
     <None Remove="Images\back-image.jpg" />
     <None Remove="Images\github.png" />
+    <None Remove="Images\home.png" />
     <None Remove="Images\pass.png" />
     <None Remove="Images\user.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
     <PackageReference Include="MySql.Data" Version="8.2.0" />
   </ItemGroup>
 
@@ -24,6 +26,7 @@
     <Resource Include="Images\armazem.png" />
     <Resource Include="Images\back-image.jpg" />
     <Resource Include="Images\github.png" />
+    <Resource Include="Images\home.png" />
     <Resource Include="Images\pass.png" />
     <Resource Include="Images\user.png" />
   </ItemGroup>

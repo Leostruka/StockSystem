@@ -76,6 +76,7 @@
                     <TextBlock  Text="StockSystem"
                                 FontSize="20" 
                                 FontFamily="Montserrat"
+                                Foreground="#E4E4E4"
                                 Grid.Column="0" 
                                 VerticalAlignment="Center" 
                                 Margin="50,0,0,0">
@@ -201,7 +202,87 @@
                             </LinearGradientBrush>
                         </Border.Background>
 
-                        
+                        <!--Menu-->
+                        <StackPanel>
+                            <Button x:Name="btnHome"
+                                    Foreground="#E4E4E4"
+                                    FontSize="20"
+                                    FontFamily="Montserrat"
+                                    BorderThickness="0"
+                                    Cursor="Hand"
+                                    Click="btnHome_Click">
+
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#2E576E"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#7491A1"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="200" Height="50"
+                                                CornerRadius="0,0,0,10"
+                                                Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="Images/home.png"
+                                           Width="30" Height="24"
+                                           Margin="10,0,0,0"/>
+                                    <TextBlock Text="Home"
+                                               Margin="10,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+
+                            <Button x:Name="btnProducts"
+                                    Foreground="#E4E4E4"
+                                    FontSize="20"
+                                    FontFamily="Montserrat"
+                                    BorderThickness="0"
+                                    Cursor="Hand"
+                                    Click="btnProducts_Click">
+
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#2E576E"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#7491A1"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="200" Height="50"
+                                                CornerRadius="0,0,0,10"
+                                                Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="Images/products.png"
+                                           Width="30" Height="24"
+                                           Margin="10,0,0,0"/>
+                                    <TextBlock Text="Products"
+                                               Margin="10,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                            
+                        </StackPanel>
 
                     </Border>
 

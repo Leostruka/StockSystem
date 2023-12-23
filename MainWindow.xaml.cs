@@ -37,5 +37,16 @@ namespace StockSystem
         {
             Application.Current.Shutdown();
         }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnProducts_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
