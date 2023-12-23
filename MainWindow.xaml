@@ -15,7 +15,7 @@
 
         <Border CornerRadius="15"
             BorderThickness="3">
-            
+
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
                     <GradientStop Color="#2E576E" Offset="0"/>
@@ -36,7 +36,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
 
-                <Grid>
+                <Grid >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="25"/>
@@ -45,18 +45,40 @@
                         <ColumnDefinition Width="10"/>
                     </Grid.ColumnDefinitions>
 
-                    <Grid.Background>
-                        <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                            <GradientStop Color="#2E576E" Offset="0"/>
-                        </LinearGradientBrush>
-                    </Grid.Background>
+                    <Border CornerRadius="0,13,0,0"
+                            Margin="-15,0,-60,0"
+                            Grid.Column="1">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0,0">
+                                <GradientStop Color="#638091" Offset="0"/>
+                                <GradientStop Color="#2E576E" Offset="1.5"/>
+                                <GradientStop Color="#28343B" Offset="0.9"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+
+                    <Border CornerRadius="13,0,7,0"
+                            Margin="0,0,9,0"
+                            Grid.Column="0">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
+                                <GradientStop Color="#2E576E" Offset="0"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+
+                    <Image Source="Images/logo.png"
+                           Grid.Column="0"
+                           HorizontalAlignment="Left"
+                           Width="30"
+                           Margin="10,3,0,3"/>
 
                     <TextBlock  Text="StockSystem"
                                 FontSize="20" 
                                 FontFamily="Montserrat"
                                 Grid.Column="0" 
                                 VerticalAlignment="Center" 
-                                Margin="20,0,0,0">
+                                Margin="50,0,0,0">
 
                     </TextBlock>
 
@@ -178,6 +200,9 @@
                                 <GradientStop Color="#7491A1" Offset="0"/>
                             </LinearGradientBrush>
                         </Border.Background>
+
+                        
+
                     </Border>
 
                     <!--Content-->

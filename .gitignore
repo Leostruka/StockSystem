@@ -44,8 +44,7 @@ _ReSharper*/
 .vscode/
 
 # Pasta do MySQL
-# Substitua 'nome_do_seu_projeto' pelo nome real do seu projeto
-nome_do_seu_projeto/mysql/
+StockSystem/mysql/
 
 # Arquivos de configuração do Rider
 .idea/
@@ -60,3 +59,6 @@ artifacts/
 
 # Pasta bin do Cake
 tools/
+
+# Imagens
+Imagens/
