@@ -15,7 +15,8 @@
     <Border CornerRadius="18">
 
         <Border CornerRadius="15"
-            BorderThickness="3">
+                BorderThickness="3"
+                Background="#2E576E">
 
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
@@ -23,13 +24,6 @@
                     <GradientStop Color="#7491A1" Offset="1"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
-
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                    <GradientStop Color="#2E576E" Offset="0"/>
-                    <GradientStop Color="#7491A1" Offset="1"/>
-                </LinearGradientBrush>
-            </Border.Background>
 
             <Grid>
                 <Grid.RowDefinitions>
@@ -195,23 +189,17 @@
 
                     <!--NavBar-->
                     <Border CornerRadius="0,0,0,10"
-                            Grid.Column="0">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,1">
-                                <GradientStop Color="#2E576E" Offset="1"/>
-                                <GradientStop Color="#7491A1" Offset="0"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
+                            Grid.Column="0"
+                            Background="#2E576E"
+                            VerticalAlignment="Top">
 
                         <!--Menu-->
                         <RadioButton Style="{StaticResource menuButton}"
                                      Tag="#D1E3ED">
-                            
                             <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                                <fa:IconImage Icon="ChartPie" Style="{StaticResource menuButtonIcon}"/>
                                 <TextBlock Text="DashBoard" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
-                            
                         </RadioButton>
                         
                     </Border>
