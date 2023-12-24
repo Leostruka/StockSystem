@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StockSystem"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1300"
         WindowStyle="None"
@@ -203,87 +204,16 @@
                         </Border.Background>
 
                         <!--Menu-->
-                        <StackPanel>
-                            <Button x:Name="btnHome"
-                                    Foreground="#E4E4E4"
-                                    FontSize="20"
-                                    FontFamily="Montserrat"
-                                    BorderThickness="0"
-                                    Cursor="Hand"
-                                    Click="btnHome_Click">
-
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#2E576E"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#7491A1"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Width="200" Height="50"
-                                                CornerRadius="0,0,0,10"
-                                                Background="{TemplateBinding Background}">
-                                            <ContentPresenter HorizontalAlignment="Center"
-                                                              VerticalAlignment="Center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="Images/home.png"
-                                           Width="30" Height="24"
-                                           Margin="10,0,0,0"/>
-                                    <TextBlock Text="Home"
-                                               Margin="10,0,0,0"/>
-                                </StackPanel>
-                            </Button>
-
-                            <Button x:Name="btnProducts"
-                                    Foreground="#E4E4E4"
-                                    FontSize="20"
-                                    FontFamily="Montserrat"
-                                    BorderThickness="0"
-                                    Cursor="Hand"
-                                    Click="btnProducts_Click">
-
-                                <Button.Style>
-                                    <Style TargetType="Button">
-                                        <Setter Property="Background" Value="#2E576E"/>
-                                        <Style.Triggers>
-                                            <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Background" Value="#7491A1"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Button.Style>
-
-                                <Button.Template>
-                                    <ControlTemplate TargetType="Button">
-                                        <Border Width="200" Height="50"
-                                                CornerRadius="0,0,0,10"
-                                                Background="{TemplateBinding Background}">
-                                            <ContentPresenter HorizontalAlignment="Center"
-                                                              VerticalAlignment="Center"/>
-                                        </Border>
-                                    </ControlTemplate>
-                                </Button.Template>
-
-                                <StackPanel Orientation="Horizontal">
-                                    <Image Source="Images/products.png"
-                                           Width="30" Height="24"
-                                           Margin="10,0,0,0"/>
-                                    <TextBlock Text="Products"
-                                               Margin="10,0,0,0"/>
-                                </StackPanel>
-                            </Button>
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     Tag="#D1E3ED">
                             
-                        </StackPanel>
-
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Home" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="DashBoard" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                            
+                        </RadioButton>
+                        
                     </Border>
 
                     <!--Content-->
