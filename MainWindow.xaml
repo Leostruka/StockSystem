@@ -194,54 +194,55 @@
                             VerticalAlignment="Top">
 
                         <!--Menu-->
-                        <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="#D1E3ED">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="ChartPie" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="DashBoard" Style="{StaticResource menuButtonText}"/>
-                            </StackPanel>
-                        </RadioButton>
+                        <StackPanel>
+                            <RadioButton Style="{StaticResource menuButton}"
+                                         Tag="#D1E3ED">
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:IconImage Icon="ChartPie" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="DashBoard" Style="{StaticResource menuButtonText}"/>
+                                </StackPanel>
+                            </RadioButton>
 
-                        <RadioButton Style="{StaticResource menuButton}"
+                            <RadioButton Style="{StaticResource menuButton}"
                                      Tag="#D1ECED">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Employees" Style="{StaticResource menuButtonText}"/>
-                            </StackPanel>
-                        </RadioButton>
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Employees" Style="{StaticResource menuButtonText}"/>
+                                </StackPanel>
+                            </RadioButton>
 
-                        <RadioButton Style="{StaticResource menuButton}"
+                            <RadioButton Style="{StaticResource menuButton}"
                                      Tag="#D1DAED">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="BoxesStacked" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Stock" Style="{StaticResource menuButtonText}"/>
-                            </StackPanel>
-                        </RadioButton>
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:IconImage Icon="BoxesStacked" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Stock" Style="{StaticResource menuButtonText}"/>
+                                </StackPanel>
+                            </RadioButton>
 
-                        <RadioButton Style="{StaticResource menuButton}"
+                            <RadioButton Style="{StaticResource menuButton}"
                                      Tag="#D1EDE5">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="ClipboardList" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Logs" Style="{StaticResource menuButtonText}"/>
-                            </StackPanel>
-                        </RadioButton>
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:IconImage Icon="ClipboardList" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Logs" Style="{StaticResource menuButtonText}"/>
+                                </StackPanel>
+                            </RadioButton>
 
-                        <RadioButton Style="{StaticResource menuButton}"
+                            <RadioButton Style="{StaticResource menuButton}"
                                      Tag="#D1D1ED">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="TruckFast" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Supplier" Style="{StaticResource menuButtonText}"/>
-                            </StackPanel>
-                        </RadioButton>
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:IconImage Icon="TruckFast" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Supplier" Style="{StaticResource menuButtonText}"/>
+                                </StackPanel>
+                            </RadioButton>
 
-                        <RadioButton Style="{StaticResource menuButton}"
+                            <RadioButton Style="{StaticResource menuButton}"
                                      Tag="#D1EDE8">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="UserTie" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Perfil" Style="{StaticResource menuButtonText}"/>
-                            </StackPanel>
-                        </RadioButton>
-
+                                <StackPanel Orientation="Horizontal">
+                                    <fa:IconImage Icon="UserTie" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Perfil" Style="{StaticResource menuButtonText}"/>
+                                </StackPanel>
+                            </RadioButton>
+                        </StackPanel>
                     </Border>
 
                     <!--Content-->
