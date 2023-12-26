@@ -28,12 +28,12 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="36"/>
-                    <RowDefinition/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <Grid >
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="25"/>
                         <ColumnDefinition Width="25"/>
                         <ColumnDefinition Width="25"/>
@@ -184,7 +184,7 @@
                         <!--NavBar-->
                         <ColumnDefinition Width="200"/>
                         <!--Content-->
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
                     <!--NavBar-->
@@ -255,6 +255,8 @@
                                 <GradientStop Color="#28343B" Offset="0.9"/>
                             </LinearGradientBrush>
                         </Border.Background>
+                        
+                        
 
                     </Border>
 
