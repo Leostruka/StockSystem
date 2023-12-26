@@ -16,8 +16,7 @@
 
         <Border CornerRadius="15"
                 BorderThickness="3"
-                Background="#2E576E">
-
+                Background="#7491A1">
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
                     <GradientStop Color="#2E576E" Offset="0"/>
@@ -26,241 +25,274 @@
             </Border.BorderBrush>
 
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="36"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
 
-                <Grid >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="25"/>
-                        <ColumnDefinition Width="25"/>
-                        <ColumnDefinition Width="25"/>
-                        <ColumnDefinition Width="10"/>
-                    </Grid.ColumnDefinitions>
-
-                    <Border CornerRadius="0,13,0,0"
-                            Margin="-15,0,-60,0"
-                            Grid.Column="1">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0,0">
-                                <GradientStop Color="#638091" Offset="0"/>
-                                <GradientStop Color="#2E576E" Offset="1.5"/>
-                                <GradientStop Color="#28343B" Offset="0.9"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
-                    </Border>
-
-                    <Border CornerRadius="13,0,7,0"
-                            Margin="0,0,9,0"
-                            Grid.Column="0">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,1" EndPoint="0,0">
-                                <GradientStop Color="#2E576E" Offset="0"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
-                    </Border>
-
-                    <Image Source="Images/logo.png"
-                           Grid.Column="0"
-                           HorizontalAlignment="Left"
-                           Width="30"
-                           Margin="10,3,0,3"/>
-
-                    <TextBlock  Text="StockSystem"
-                                FontSize="20" 
-                                FontFamily="Montserrat"
-                                Foreground="#E4E4E4"
-                                Grid.Column="0" 
-                                VerticalAlignment="Center" 
-                                Margin="50,0,0,0">
-
-                    </TextBlock>
-
-                    <Button x:Name="btnMinimize"
-                            Foreground="#000"
-                            FontSize="12"
-                            FontFamily="Montserrat"
-                            BorderThickness="0"
-                            Cursor="Hand"
-                            Grid.Column="1"
-                            Click="btnMinimize_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#28343B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#C5C353"/>
-                                        <Setter Property="Content" Value="🗕"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="18" Height="18"
-                                    CornerRadius="9"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center"
-                          VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
-                    <Button x:Name="btnMaximize"
-                            Foreground="#000"
-                            FontSize="12"
-                            FontFamily="Montserrat"
-                            BorderThickness="0"
-                            Cursor="Hand"
-                            Grid.Column="2"
-                            Click="btnMaximize_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#28343B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#47A860"/>
-                                        <Setter Property="Content" Value="🗖"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="18" Height="18"
-                                        CornerRadius="9"
-                                        Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center"
-                              VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
-                    <Button x:Name="btnClose"
-                            Foreground="#000"
-                            FontSize="12"
-                            FontFamily="Montserrat"
-                            BorderThickness="0"
-                            Cursor="Hand"
-                            Grid.Column="3"
-                            Click="btnClose_Click">
-
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="#28343B"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="#A8474A"/>
-                                        <Setter Property="Content" Value="ø"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="18" Height="18"
-                                    CornerRadius="9"
-                                    Background="{TemplateBinding Background}">
-                                    <ContentPresenter HorizontalAlignment="Center"
-                                                  VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                </Grid>
-
-                <Grid Grid.Row="2">
-
-                    <Grid.ColumnDefinitions>
-                        <!--NavBar-->
-                        <ColumnDefinition Width="200"/>
-                        <!--Content-->
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-
+                <Grid.ColumnDefinitions>
                     <!--NavBar-->
-                    <Border CornerRadius="0,0,0,10"
-                            Grid.Column="0"
-                            Background="#2E576E"
-                            VerticalAlignment="Top">
-
-                        <!--Menu-->
-                        <StackPanel>
-                            <RadioButton Style="{StaticResource menuButton}"
-                                         Tag="#D1E3ED">
-                                <StackPanel Orientation="Horizontal">
-                                    <fa:IconImage Icon="ChartPie" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="DashBoard" Style="{StaticResource menuButtonText}"/>
-                                </StackPanel>
-                            </RadioButton>
-
-                            <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="#D1DAED">
-                                <StackPanel Orientation="Horizontal">
-                                    <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Employees" Style="{StaticResource menuButtonText}"/>
-                                </StackPanel>
-                            </RadioButton>
-
-                            <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="#D1D1ED">
-                                <StackPanel Orientation="Horizontal">
-                                    <fa:IconImage Icon="BoxesStacked" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Stock" Style="{StaticResource menuButtonText}"/>
-                                </StackPanel>
-                            </RadioButton>
-
-                            <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="#D1ECED">
-                                <StackPanel Orientation="Horizontal">
-                                    <fa:IconImage Icon="ClipboardList" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Logs" Style="{StaticResource menuButtonText}"/>
-                                </StackPanel>
-                            </RadioButton>
-
-                            <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="#D1EDE5">
-                                <StackPanel Orientation="Horizontal">
-                                    <fa:IconImage Icon="TruckFast" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Supplier" Style="{StaticResource menuButtonText}"/>
-                                </StackPanel>
-                            </RadioButton>
-
-                            <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="#D1EDE8">
-                                <StackPanel Orientation="Horizontal">
-                                    <fa:IconImage Icon="UserTie" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Perfil" Style="{StaticResource menuButtonText}"/>
-                                </StackPanel>
-                            </RadioButton>
-                        </StackPanel>
-                    </Border>
-
+                    <ColumnDefinition Width="200"/>
                     <!--Content-->
-                    <Border CornerRadius="0,0,10,0"
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <!--NavBar-->
+                <Border CornerRadius="13,0,0,13"
+                        Grid.Column="0"
+                        Background="#2E576E">
+
+                    <!--Menu-->
+                    <StackPanel>
+
+                        <!--Logo-->
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,0,0,20">
+                            <Image Source="Images/logo.png"
+                                    Grid.Column="0"
+                                    HorizontalAlignment="Left"
+                                    Width="30"
+                                    Margin="17,0,0,0"/>
+
+                            <TextBlock  Text="StockSystem"
+                                        FontSize="20" 
+                                        FontFamily="Montserrat"
+                                        Foreground="#D1DAED"
+                                        Grid.Column="0" 
+                                        VerticalAlignment="Center" 
+                                        Margin="15,0,0,0">
+
+                            </TextBlock>
+                        </StackPanel>
+
+                        <!--NavBar-->
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     Tag="#D1E3ED">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="ChartPie" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="DashBoard" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     Tag="#D1DAED">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="Users" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Employees" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     Tag="#D1D1ED">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="BoxesStacked" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Stock" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     Tag="#D1ECED">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="ClipboardList" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Logs" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     Tag="#D1EDE5">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="TruckFast" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Supplier" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                        <RadioButton Style="{StaticResource menuButton}"
+                                     Tag="#D1EDE8">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:IconImage Icon="UserTie" Style="{StaticResource menuButtonIcon}"/>
+                                <TextBlock Text="Perfil" Style="{StaticResource menuButtonText}"/>
+                            </StackPanel>
+                        </RadioButton>
+                    </StackPanel>
+                </Border>
+
+                <!--Content-->
+                <Border CornerRadius="0,13,13,0"
                             Grid.Column="1">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0.01,0" EndPoint="0,0">
-                                <GradientStop Color="#2E576E" Offset="1"/>
-                                <GradientStop Color="#7491A1" Offset="0"/>
-                                <GradientStop Color="#28343B" Offset="0.9"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <!--Control bar-->
+                            <RowDefinition Height="25"/>
+                            <!--Header-->
+                            <RowDefinition Height="35"/>
+                            <!--Content-->
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
                         
-                        
+                        <!--Control bar-->
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="10"/>
+                            </Grid.ColumnDefinitions>
 
-                    </Border>
+                            <Border CornerRadius="0,13,0,28"
+                                    Margin="-15,0,-60,0"
+                                    Grid.Column="1">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0.1,0" EndPoint="0,0">
+                                        <GradientStop Color="#638091" Offset="0"/>
+                                        <GradientStop Color="#2E576E" Offset="1.5"/>
+                                        <GradientStop Color="#28343B" Offset="0.9"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
 
-                </Grid>
+                            <Border CornerRadius="0,30,0,0"
+                                    Margin="0,0,9,0"
+                                    Grid.Column="0">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0.01,0" EndPoint="0,0">
+                                        <GradientStop Color="#2E576E" Offset="1"/>
+                                        <GradientStop Color="#7491A1" Offset="0"/>
+                                        <GradientStop Color="#28343B" Offset="0.9"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <StackPanel x:Name="pnlControlBar"
+                                            Background="Transparent"
+                                            MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown">
+                                    
+                                </StackPanel>
+                            </Border>
+
+
+
+                            <Button x:Name="btnMinimize"
+                                    Foreground="#000"
+                                    FontSize="12"
+                                    FontFamily="Montserrat"
+                                    BorderThickness="0"
+                                    Cursor="Hand"
+                                    Grid.Column="1"
+                                    Click="btnMinimize_Click">
+
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#28343B"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#C5C353"/>
+                                                <Setter Property="Content" Value="🗕"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="18" Height="18"
+                                                CornerRadius="9"
+                                                Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                            <Button x:Name="btnMaximize"
+                                    Foreground="#000"
+                                    FontSize="12"
+                                    FontFamily="Montserrat"
+                                    BorderThickness="0"
+                                    Cursor="Hand"
+                                    Grid.Column="2"
+                                    Click="btnMaximize_Click">
+
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#28343B"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#47A860"/>
+                                                <Setter Property="Content" Value="🗖"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="18" Height="18"
+                                                CornerRadius="9"
+                                                Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+
+                            <Button x:Name="btnClose"
+                                    Foreground="#000"
+                                    FontSize="12"
+                                    FontFamily="Montserrat"
+                                    BorderThickness="0"
+                                    Cursor="Hand"
+                                    Grid.Column="3"
+                                    Click="btnClose_Click">
+
+                                <Button.Style>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="#28343B"/>
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="#A8474A"/>
+                                                <Setter Property="Content" Value="ø"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Width="18" Height="18"
+                                                CornerRadius="9"
+                                                Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center"
+                                                              VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </Grid>
+
+                        <!--Header-->
+                        <Border CornerRadius="0,0,0,0"
+                                Grid.Row="1">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0.01,0" EndPoint="0,0">
+                                    <GradientStop Color="#2E576E" Offset="1"/>
+                                    <GradientStop Color="#7491A1" Offset="0"/>
+                                    <GradientStop Color="#28343B" Offset="0.9"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+
+                        <!--Content-->
+                        <Border CornerRadius="0,0,10,0"
+                                Grid.Row="2">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0.01,0" EndPoint="0,0">
+                                    <GradientStop Color="#2E576E" Offset="1"/>
+                                    <GradientStop Color="#7491A1" Offset="0"/>
+                                    <GradientStop Color="#28343B" Offset="0.9"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                        </Border>
+
+                    </Grid>
+
+                </Border>
 
             </Grid>
 

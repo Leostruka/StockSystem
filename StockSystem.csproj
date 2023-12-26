@@ -12,6 +12,7 @@
     <None Remove="Images\armazem.png" />
     <None Remove="Images\back-image.jpg" />
     <None Remove="Images\github.png" />
+    <None Remove="Images\logo.png" />
     <None Remove="Images\pass.png" />
     <None Remove="Images\user.png" />
   </ItemGroup>
@@ -25,6 +26,7 @@
     <Resource Include="Images\armazem.png" />
     <Resource Include="Images\back-image.jpg" />
     <Resource Include="Images\github.png" />
+    <Resource Include="Images\logo.png" />
     <Resource Include="Images\pass.png" />
     <Resource Include="Images\user.png" />
   </ItemGroup>
