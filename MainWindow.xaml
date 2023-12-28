@@ -147,7 +147,8 @@
                                 </Border.Background>
                                 <StackPanel x:Name="pnlControlBar"
                                             Background="Transparent"
-                                            MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown">
+                                            MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown"
+                                            MouseEnter="pnlControlBar_MouseEnter">
                                     
                                 </StackPanel>
                             </Border>
