@@ -101,14 +101,6 @@
                                 <TextBlock Text="Supplier" Style="{StaticResource menuButtonText}"/>
                             </StackPanel>
                         </RadioButton>
-
-                        <RadioButton Style="{StaticResource menuButton}"
-                                     Tag="#D1EDE8">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:IconImage Icon="UserTie" Style="{StaticResource menuButtonIcon}"/>
-                                <TextBlock Text="Perfil" Style="{StaticResource menuButtonText}"/>
-                            </StackPanel>
-                        </RadioButton>
                     </StackPanel>
                 </Border>
 
@@ -139,7 +131,7 @@
                                     Margin="0,0,9,0"
                                     Grid.Column="0">
                                 <Border.Background>
-                                    <LinearGradientBrush StartPoint="0.01,0" EndPoint="0,0">
+                                    <LinearGradientBrush StartPoint="0.011,0" EndPoint="0,0">
                                         <GradientStop Color="#2E576E" Offset="1"/>
                                         <GradientStop Color="#7491A1" Offset="0"/>
                                         <GradientStop Color="#28343B" Offset="0.9"/>
