@@ -116,7 +116,7 @@
                             <!--Content-->
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        
+
                         <!--Control bar-->
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -141,7 +141,7 @@
                                             Background="Transparent"
                                             MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown"
                                             MouseEnter="pnlControlBar_MouseEnter">
-                                    
+
                                 </StackPanel>
                             </Border>
 
@@ -157,8 +157,8 @@
                                 </Border.Background>
                             </Border>
 
-                            
-                            
+
+
                             <Button x:Name="btnMinimize"
                                     Foreground="#000"
                                     FontSize="12"
@@ -286,7 +286,6 @@
                     </Grid>
 
                 </Border>
-
             </Grid>
 
         </Border>
