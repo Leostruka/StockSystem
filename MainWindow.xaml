@@ -269,6 +269,23 @@
                                     <GradientStop Color="#28343B" Offset="0.9"/>
                                 </LinearGradientBrush>
                             </Border.Background>
+                            
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                
+                                <!--Title-->
+                                <StackPanel Grid.Column="0"
+                                            Orientation="Horizontal"
+                                            VerticalAlignment="Center">
+                                    
+                                    
+                                    
+                                </StackPanel>
+                                
+                            </Grid>
                         </Border>
 
                         <!--Content-->
@@ -286,6 +303,7 @@
                     </Grid>
 
                 </Border>
+                
             </Grid>
 
         </Border>
