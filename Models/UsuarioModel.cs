@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ namespace StockSystem.Models
             [Required]
             public string user { get; set; }
             [Required]
-            public string password { get; set; }
+            public SecureString password { get; set; }
         }
     }
 

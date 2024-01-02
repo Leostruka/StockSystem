@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using StockSystem.Models;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;

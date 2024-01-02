@@ -98,7 +98,7 @@ namespace CRUD_Forms.Data
             // Cria uma instância da classe Connection para gerenciar a conexão com o banco de dados
             Connection con = new Connection();
             con.AbrirConexao(); // Abre a conexão com o banco de dados
-            var sql = new MySqlCommand("SELECT id, name FROM employee WHERE id = '" + id + "'", con.con); // Cria um comando MySqlCommand para selecionar registros específicos da tabela "profile"
+            var sql = new MySqlCommand("SELECT id, name, email FROM employee WHERE id = '" + id + "'", con.con); // Cria um comando MySqlCommand para selecionar registros específicos da tabela "profile"
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql); // Cria um adaptador para executar o comando
             DataTable data = new DataTable(); // Cria um DataTable para armazenar os resultados
             adapter.Fill(data); // Preenche o DataTable com os resultados da consulta
