@@ -280,11 +280,37 @@
                                 <StackPanel Grid.Column="0"
                                             Orientation="Horizontal"
                                             VerticalAlignment="Center">
-                                    
-                                    
-                                    
+
+                                    <fa:IconImage Icon="ChartPie"
+                                                  Width="20"
+                                                  Height="20"
+                                                  Margin="35,0,10,0"
+                                                  Foreground="#D1DAED"/>
+
+                                    <TextBlock Text="Dashboard"
+                                               FontSize="16"
+                                               FontFamily="Montserrat"
+                                               FontWeight="Medium"
+                                               Foreground="#D1DAED"/>
                                 </StackPanel>
                                 
+                                <!--User options-->
+                                <StackPanel Grid.Column="1"
+                                            Orientation="Horizontal"
+                                            FlowDirection="RightToLeft"
+                                            VerticalAlignment="Center"
+                                            Margin="0,0,10,0">
+
+                                    <Button Style="{StaticResource iconButton}"
+                                            Tag="#D1DAED">
+                                        <fa:IconImage Icon="AngleDown"
+                                                      Style="{StaticResource iconButtonIcon}"/>
+                                    </Button>
+                                    
+                                    
+
+                                </StackPanel>
+
                             </Grid>
                         </Border>
 
