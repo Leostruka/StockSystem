@@ -1,4 +1,5 @@
-﻿using StockSystem.Models;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using StockSystem.Models;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
@@ -23,6 +24,7 @@ namespace StockSystem
         {
             InitializeComponent();
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+            User currentUser = new User();
         }
 
         [DllImport("user32.dll")]
