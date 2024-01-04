@@ -95,7 +95,7 @@ namespace StockSystem.View
             }
             else
             {
-                MainWindow mainWindow = new MainWindow();
+                MainWindow mainWindow = new MainWindow(txtUser.Text);
                 mainWindow.Show();
 
                 this.Close();

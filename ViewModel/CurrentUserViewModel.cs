@@ -11,11 +11,11 @@ namespace StockSystem.ViewModel
 {
     class CurrentUserViewModel
     {
-        public DataTable SetCurrent(string user, string password)
+        public DataTable SetCurrent(string user)
         {
             // Modifique a autenticação para consultar o banco de dados
             SQL sql = new SQL();
-            DataTable dt = sql.Authenticate(user, password);
+            DataTable dt = sql.FindUser(user);
 
             return dt;
         }

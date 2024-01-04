@@ -306,8 +306,11 @@
                                         <fa:IconImage Icon="AngleDown"
                                                       Style="{StaticResource iconButtonIcon}"/>
                                     </Button>
-                                    
-                                    
+
+                                    <TextBlock Text="oie"
+                                               Foreground="#D1DAED"
+                                               FontFamily="Montserrat"
+                                               FontSize="16"/>
 
                                 </StackPanel>
 

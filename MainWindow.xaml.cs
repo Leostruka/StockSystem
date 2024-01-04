@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using StockSystem.Models;
+using StockSystem.ViewModel;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
@@ -20,13 +21,12 @@ namespace StockSystem
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(string user)
         {
             InitializeComponent();
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-            User currentUser = new User();
         }
-
+        
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 

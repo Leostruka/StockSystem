@@ -58,6 +58,23 @@ namespace CRUD_Forms.Data
             return data;
         }
 
+        // Método para buscar usuário no banco de dados
+        public DataTable FindUser(string user)
+        {
+            Connection con = new Connection();
+            con.AbrirConexao();
+
+            var sql = new MySqlCommand("SELECT * FROM employee WHERE user = @user", con.con);
+            sql.Parameters.AddWithValue("@user", user);
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql);
+            DataTable data = new DataTable();
+            adapter.Fill(data);
+
+            con.CloseConnection();
+            return data;
+        }
+
         // Método para atualizar usuário no banco de dados
         public void Update(int id, string name, string cpf, string email)
         {
