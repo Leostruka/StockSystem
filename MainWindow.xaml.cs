@@ -26,7 +26,7 @@ namespace StockSystem
             InitializeComponent();
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
         }
-        
+
         [DllImport("user32.dll")]
         public static extern IntPtr SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
@@ -60,6 +60,6 @@ namespace StockSystem
         {
             Application.Current.Shutdown();
         }
-        
+
     }
 }

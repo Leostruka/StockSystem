@@ -16,7 +16,7 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderThickness="4,0,0,0"
                             BorderBrush="{TemplateBinding BorderBrush}">
-                            <ContentPresenter HorizontalAlignment="Left"
+                        <ContentPresenter HorizontalAlignment="Left"
                                               VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
@@ -41,7 +41,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    
+
     <!--Menu button icon-->
     <Style x:Key="menuButtonIcon" TargetType="fa:IconImage">
         <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
@@ -49,7 +49,7 @@
         <Setter Property="Height" Value="22"/>
         <Setter Property="Margin" Value="35,0,20,0"/>
     </Style>
-    
+
     <!--Menu button text-->
     <Style x:Key="menuButtonText" TargetType="TextBlock">
         <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
@@ -59,7 +59,7 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
-    
+
     <!--Icon button-->
     <Style x:Key="iconButton" TargetType="Button">
         <!--Normal button style-->
