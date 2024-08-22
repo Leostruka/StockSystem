@@ -15,11 +15,10 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- Copiando estrutura do banco de dados para stockdata
 CREATE DATABASE IF NOT EXISTS `stockdata` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `stockdata`;
 
--- Copiando estrutura para tabela stockdata.employee
+-- Create tables without foreign key constraints
 CREATE TABLE IF NOT EXISTS `employee` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -33,9 +32,6 @@ CREATE TABLE IF NOT EXISTS `employee` (
   UNIQUE KEY `user` (`user`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Exportação de dados foi desmarcado.
-
--- Copiando estrutura para tabela stockdata.permission
 CREATE TABLE IF NOT EXISTS `permission` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
@@ -43,9 +39,6 @@ CREATE TABLE IF NOT EXISTS `permission` (
   UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Exportação de dados foi desmarcado.
-
--- Copiando estrutura para tabela stockdata.stock
 CREATE TABLE IF NOT EXISTS `stock` (
   `id` int NOT NULL AUTO_INCREMENT,
   `supplierid` int DEFAULT NULL,
@@ -54,14 +47,9 @@ CREATE TABLE IF NOT EXISTS `stock` (
   `price` decimal(8,2) DEFAULT NULL,
   `descript` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`),
-  KEY `supplierid` (`supplierid`),
-  CONSTRAINT `stock_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `supplier` (`id`)
+  UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Exportação de dados foi desmarcado.
-
--- Copiando estrutura para tabela stockdata.stocktransaction
 CREATE TABLE IF NOT EXISTS `stocktransaction` (
   `id` int NOT NULL AUTO_INCREMENT,
   `stockid` int DEFAULT NULL,
@@ -69,16 +57,9 @@ CREATE TABLE IF NOT EXISTS `stocktransaction` (
   `type` varchar(10) DEFAULT NULL,
   `amount` int DEFAULT NULL,
   `date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `stockid` (`stockid`),
-  KEY `userid` (`userid`),
-  CONSTRAINT `stocktransaction_ibfk_1` FOREIGN KEY (`stockid`) REFERENCES `stock` (`id`),
-  CONSTRAINT `stocktransaction_ibfk_2` FOREIGN KEY (`userid`) REFERENCES `employee` (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Exportação de dados foi desmarcado.
-
--- Copiando estrutura para tabela stockdata.supplier
 CREATE TABLE IF NOT EXISTS `supplier` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(144) DEFAULT NULL,
@@ -89,17 +70,23 @@ CREATE TABLE IF NOT EXISTS `supplier` (
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Exportação de dados foi desmarcado.
-
--- Copiando estrutura para tabela stockdata.userpermission
 CREATE TABLE IF NOT EXISTS `userpermission` (
   `userid` int NOT NULL,
   `permissionid` int NOT NULL,
-  PRIMARY KEY (`userid`,`permissionid`),
-  KEY `permissionid` (`permissionid`),
-  CONSTRAINT `userpermission_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `employee` (`id`),
-  CONSTRAINT `userpermission_ibfk_2` FOREIGN KEY (`permissionid`) REFERENCES `permission` (`id`)
+  PRIMARY KEY (`userid`,`permissionid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Add foreign key constraints after all tables are created
+ALTER TABLE `stock`
+  ADD CONSTRAINT `stock_ibfk_1` FOREIGN KEY (`supplierid`) REFERENCES `supplier` (`id`);
+
+ALTER TABLE `stocktransaction`
+  ADD CONSTRAINT `stocktransaction_ibfk_1` FOREIGN KEY (`stockid`) REFERENCES `stock` (`id`),
+  ADD CONSTRAINT `stocktransaction_ibfk_2` FOREIGN KEY (`userid`) REFERENCES `employee` (`id`);
+
+ALTER TABLE `userpermission`
+  ADD CONSTRAINT `userpermission_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `employee` (`id`),
+  ADD CONSTRAINT `userpermission_ibfk_2` FOREIGN KEY (`permissionid`) REFERENCES `permission` (`id`);
 
 -- Exportação de dados foi desmarcado.
 
